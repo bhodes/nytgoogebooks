@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import API from "../utils/API";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import { Input, FormBtn } from "../components/Form/index";
-import GoogleBooks from "../components/GoogleBooks";
+import API from "../utils/api";
+import Header from "../components/header";
+import Nav from "../components/navbar";
+import { Input, FormBtn } from "../components/form";
+import GoogleBooks from "../components/books";
 
 class Search extends Component {
   state = {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import API from '../utils/API';
-import Jumbotron from '../components/Jumbotron';
-import Nav from '../components/Nav';
-import Saved from '../components/SavedBooks';
+import API from '../utils/api';
+import Jumbotron from '../components/header';
+import Nav from '../components/navbar';
+import SavedBooks from '../components/saved';
 
 class Saved extends Component {
   state = {
@@ -15,7 +15,7 @@ class Saved extends Component {
 
   renderSavedBooks = () => {
     return this.state.savedBooks.map(book => (
-      <Saved
+      <SavedBooks
         _id={book._id}
         key={book._id}
         title={book.title}
@@ -48,9 +48,9 @@ class Saved extends Component {
       <div className="text-center mx-auto">
         <Nav saved={true} />
         <Jumbotron>
-          <h1 style={{ fontSize: 80 }}>Saved Books</h1>
-          <p style={{ fontSize: 30 }}>Saved books list.</p>
-          <p style={{fontSize: 15}}>View saved books and remove.</p>
+          <h1>Saved Books</h1>
+          
+          <p>Your saved books are listed below</p>
         </Jumbotron>
         <div className="border border-info text-left m-1 p-3">
           <h2>Saved Books</h2>
