@@ -1,4 +1,5 @@
 import React from "react";
+import Popup from "reactjs-popup";
 
 const GoogleBooks = props => {
   const book = {
@@ -19,7 +20,12 @@ const GoogleBooks = props => {
           <div className="col text-right">
             <button className="btn btn-primary">View</button>
 
-    
+            <Popup
+              trigger={<button className="btn btn-primary">Save</button>}
+              onOpen={() => props.saveGoogleBook(book)}
+              position="left bottom">
+              <h3>Book saved!</h3>
+            </Popup>
           </div>
         </div>
         <div className="row">

@@ -57,8 +57,8 @@ class Search extends Component {
       <div className="text-center mx-auto">
         <Nav home={true} />
         <Header>
-          <h1 style={{ fontSize: 80 }}>Google Book Search</h1>
-          <p style={{ fontSize: 30 }}>Search and save books!</p>
+          <h1>Google Book Search</h1>
+          <p>Search and save books!</p>
         </Header>
         <div className="row border border-info m-1 p-2">
           <div className="col text-left">
@@ -80,12 +80,12 @@ class Search extends Component {
           </div>
         </div>
         <div className="border border-info text-left m-1 p-3">
-          <h2>Results</h2>
+          <h2>Books:</h2>
           {this.state.googleBooks.length ? (
             this.renderGoogleBooks()
           ) : (
             <div className="text-center">
-              <h2>No books to display.</h2>
+              <h2>No books found</h2>
             </div>
           )}
         </div>
